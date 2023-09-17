@@ -27,6 +27,7 @@ function App() {
 
   return (
     <>
+      <h1 className="text-center">MyExpanses Tracker</h1>
       <div className="mb-3">
         <ExpenseForm
           onSubmit={(expense) =>
