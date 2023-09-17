@@ -1,4 +1,3 @@
-
 interface Expense {
   id: number;
   description: string;
@@ -12,7 +11,7 @@ interface Props {
 }
 
 const ExpanseList = ({ expenses, onDelete }: Props) => {
-  if(expenses.length === 0){
+  if (expenses.length === 0) {
     return null;
   }
   return (
@@ -45,7 +44,12 @@ const ExpanseList = ({ expenses, onDelete }: Props) => {
       <tfoot>
         <tr>
           <td>Total</td>
-          <td>${expenses.reduce((acc, expense) => expense.amount + acc, 0).toFixed(2)}</td>
+          <td>
+            $
+            {expenses
+              .reduce((acc, expense) => expense.amount + acc, 0)
+              .toFixed(2)}
+          </td>
           <td></td>
           <td></td>
         </tr>
