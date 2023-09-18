@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ExpanseFilter from "./Expanse-tracker/components/ExpanseFilter";
 import ExpanseList from "./Expanse-tracker/components/ExpanseList";
 import ExpenseForm from "./Expanse-tracker/components/ExpenseForm";
 
 function App() {
+
+  useEffect( () => {
+    document.title = "MyExpenses App"
+  });
+
   const [selectedCategory, setSelectedCategory] = useState("");
 
   const [expenses, setExpanses] = useState([
@@ -27,7 +32,7 @@ function App() {
 
   return (
     <>
-      <h1 className="text-center">MyExpanses Tracker</h1>
+      <h1 className="text-center">MyExpenses Tracker</h1>
       <div className="mb-3">
         <ExpenseForm
           onSubmit={(expense) =>
