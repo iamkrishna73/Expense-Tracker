@@ -46,6 +46,7 @@ const ExpenseForm = ({ onSubmit }: Props) => {
           id="description"
           type="text"
           className="form-control"
+          autoFocus={true}
         />
         {errors.description && (
           <p className="text-danger">{errors.description.message}</p>
