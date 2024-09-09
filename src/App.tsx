@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import ExpanseFilter from "./Expanse-tracker/components/ExpanseFilter";
-import ExpanseList from "./Expanse-tracker/components/ExpanseList";
-import ExpenseForm from "./Expanse-tracker/components/ExpenseForm";
+import ExpanseFilter from "./components/ExpanseFilter";
+import ExpanseList from "./components/ExpanseList";
+import ExpenseForm from "./components/ExpenseForm";
 
 function App() {
-
-  useEffect( () => {
-    document.title = "MyExpenses App"
+  useEffect(() => {
+    document.title = "MyExpenses App";
   });
 
   const [selectedCategory, setSelectedCategory] = useState("");
